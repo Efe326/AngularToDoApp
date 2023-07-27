@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todoApp';
+  user = 'Efe'
+  items: { yapilacaklar: string; yapildi: string }[] = [
+    { yapilacaklar: "yemek", yapildi: "hayir" },
+    { yapilacaklar: "kod yazmak", yapildi: "evet" },
+    { yapilacaklar: "spor", yapildi: "evet" },
+    { yapilacaklar: "sinema", yapildi: "hayir" },
+    { yapilacaklar: "dans", yapildi: "hayir" }
+  ];
 }
