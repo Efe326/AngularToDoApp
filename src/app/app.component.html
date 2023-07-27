@@ -25,6 +25,9 @@
             <td>{{ i + 1 }}</td>
             <td>{{ item.yapilacaklar }}</td>
             <td>
+              <input type="checkbox" [(ngModel)]= "item.yapildi">
+            </td>
+            <td>
               <span [ngSwitch]="item.yapildi">
                 <span *ngSwitchCase="true">yapildi</span>
                 <span *ngSwitchCase="false">yapilmadi</span>
