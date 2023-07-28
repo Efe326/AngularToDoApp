@@ -9,14 +9,23 @@ import { Model } from './model';
 export class AppComponent {
   title = 'todoApp';
   model = new Model();
+  isDisplay = false
 
-
-  getName(){
+  getName() {
     return this.model.user;
   }
 
   getItems() {
-    return this.model.items;
+    if (this.isDisplay) {
+      return this.model.items
+    }
+    return this.model.items.filter(item=> !item.yapildi);
   }
 
+  addItem(newItem: string) {
+    if (newItem.trim() !== '') {
+      const item = { yapilacaklar: newItem, yapildi: false };
+      this.model.items.push(item);
+    }
+  }
 }
